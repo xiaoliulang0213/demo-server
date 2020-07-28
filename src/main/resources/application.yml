@@ -1,0 +1,19 @@
+datasource:
+  c3p0:
+    driverClass: oracle.jdbc.driver.OracleDriver
+    jdbcUrl: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+    user: demo
+    password: demo
+    minPoolSize: 10
+    initialPoolSize: 10
+    maxIdleTime: 1800
+    acquireIncrement: 5
+    checkoutTimeout: 1800
+
+mybatis-plus:
+  mapper-locations: classpath*:com/miss/demo/**/mapper/*.xml
+  type-aliases-package: com.miss.demo.**.entity
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  config: classpath:logback-spring.xml
